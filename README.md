@@ -275,6 +275,11 @@ Int у=123/10; // у будет иметь значение 12
 2) Если arr[i] == x - вернуть i.
 3) После цикла вернуть -1.
 ### Тестирование
+<img width="360" height="426" alt="изображение" src="https://github.com/user-attachments/assets/3c4f3650-a216-4462-8eea-bdaf56c95e8a" />
+<img width="372" height="404" alt="изображение" src="https://github.com/user-attachments/assets/b70cab2e-e6a4-46cf-8c16-2ba473aa8f8f" />
+<img width="359" height="143" alt="изображение" src="https://github.com/user-attachments/assets/6f9ff774-47ea-44f4-8a7d-ee9ad1f6d5bd" />
+
+
 
 ## Задача 2
 Поиск максимального.
@@ -286,7 +291,8 @@ Int у=123/10; // у будет иметь значение 12
 2) Цикл i от 1 до size: если abs(arr[i]) > abs(maximum) - обновить maximum.
 3) Вернуть maximum.
 
-### Тестирование 
+### Тестирование
+<img width="358" height="365" alt="изображение" src="https://github.com/user-attachments/assets/b50929ba-51ef-4f5e-97b8-63b611719632" />
 
 
 ## Задача 3
@@ -304,6 +310,8 @@ Int у=123/10; // у будет иметь значение 12
 6) Вернуть указатель на новый массив.
 
 ### Тестирование
+<img width="423" height="595" alt="изображение" src="https://github.com/user-attachments/assets/999d4cdc-8e5b-46c7-b055-afdc200e8ec1" />
+
 
 ## Задача 4
 Возвратный реверс.
@@ -316,6 +324,7 @@ Int у=123/10; // у будет иметь значение 12
 3) Вернуть указатель на новый массив.
 
 ### Тестирование
+<img width="357" height="375" alt="изображение" src="https://github.com/user-attachments/assets/8a905f37-5b39-4b48-a29d-8c5aeb052668" />
 
 
 ## Задача 5
@@ -330,7 +339,9 @@ Int у=123/10; // у будет иметь значение 12
 4) Цикл i от 0 до size: если arr[i] == x - записать i в result[j], увеличить j.
 5) Вернуть указатель на новый массив.
 
-### Тестирование 
+### Тестирование
+<img width="365" height="412" alt="изображение" src="https://github.com/user-attachments/assets/b29f7641-ce6e-4e31-b8f1-35e666aa6ab3" />
+
 
    
 
