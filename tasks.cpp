@@ -424,7 +424,7 @@ int main() {
             case 13: {
                 long x;
                 std::cout << "Введите число: " << std::endl;
-                if ((std::cin >> x) && (x >= 0)) {
+                if (std::cin >> x) {
                     std::cin.ignore(10000, '\n');
                     std::cout << numLen(x) << std::endl;
                 } else {
