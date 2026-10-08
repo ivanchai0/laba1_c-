@@ -244,7 +244,7 @@ int main() {
         std::cout << "18) 4.5  Вставка массива в массив\n";
         std::cout << "19) 4.7  Реверс массива (новый массив)\n";
         std::cout << "20) 4.9  Все вхождения числа в массиве\n";
-        std::cout << "0.    Выход\n";
+        std::cout << "0)    Выход\n";
 
         std::cout << "Введите номер задачи: ";
         std::cin >> choice;
@@ -276,10 +276,10 @@ int main() {
                 std::cout << "Введите символ (цифру от 0 до 9): ";
                 std::cin >> x;
 
-                if (x >= '0' && x <= '9' && std::cin.peek() == '\n') {
+                if (x >= '0' && x <= '9') {
                     std::cout << "Результат: " << charToNum(x) << std::endl;
                 } else {
-                    std::cout << "Нужно ввести одну цифру от 0 до 9!" << std::endl;
+                    std::cout << "Нужно ввести цифру от 0 до 9!" << std::endl;
                 }
                 std::cin.ignore(10000, '\n');
                 break;
@@ -304,7 +304,7 @@ int main() {
                 std::cout << "Введите правую и левую границу и число: " << std::endl;
                 if ((std::cin >> a) && (std::cin >> b) && (std::cin >> num)) {
                     std::cin.ignore(10000, '\n');
-                    std::cout << std::boolalpha <<isInRange(a, b, num) << std::endl;
+                    std::cout << std::boolalpha << isInRange(a, b, num) << std::endl;
                 } else {
                     std::cout << "Нужно ввести число!" << std::endl;
                     std::cin.clear();
@@ -474,14 +474,29 @@ int main() {
                 std::cout << "Сколько элементов? (от 1 до 100): ";
                 std::cin >> n;
 
+                while (!std::cin || n < 1 || n > 100) {
+                    std::cout << "Введите число от 1 до 100: ";
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    std::cin >> n;
+                }
+
                 for (int i = 0; i < n; i++) {
                     std::cout << "arr[" << i << "] = ";
-                    std::cin >> arr[i];
+                    while (!(std::cin >> arr[i])) {
+                        std::cout << "Нужно ввести число! Ещё раз: ";
+                        std::cin.clear();
+                        std::cin.ignore(10000, '\n');
+                    }
                 }
 
                 int x;
                 std::cout << "Введите x: ";
-                std::cin >> x;
+                while (!(std::cin >> x)) {
+                    std::cout << "Нужно ввести число! Ещё раз: ";
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                }
                 std::cin.ignore(10000, '\n');
 
                 std::cout << "Индекс: " << findFirst(arr, n, x) << std::endl;
@@ -492,10 +507,24 @@ int main() {
                 int n;
                 std::cout << "Сколько элементов? (от 1 до 100): ";
                 std::cin >> n;
+
+                while (!std::cin || n < 1 || n > 100) {
+                    std::cout << "Введите число от 1 до 100: ";
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    std::cin >> n;
+                }
+
                 for (int i = 0; i < n; i++) {
                     std::cout << "arr[" << i << "] = ";
-                    std::cin >> arr[i];
+                    while (!(std::cin >> arr[i])) {
+                        std::cout << "Нужно ввести число! Ещё раз: ";
+                        std::cin.clear();
+                        std::cin.ignore(10000, '\n');
+                    }
                 }
+                std::cin.ignore(10000, '\n');
+
                 std::cout << "Максимум по модулю: " << maxAbs(arr, n) << std::endl;
                 break;
             }
@@ -505,20 +534,44 @@ int main() {
 
                 std::cout << "Сколько элементов в arr? (от 1 до 100): ";
                 std::cin >> n1;
+                while (!std::cin || n1 < 1 || n1 > 100) {
+                    std::cout << "Введите число от 1 до 100: ";
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    std::cin >> n1;
+                }
                 for (int i = 0; i < n1; i++) {
                     std::cout << "arr[" << i << "] = ";
-                    std::cin >> arr[i];
+                    while (!(std::cin >> arr[i])) {
+                        std::cout << "Нужно ввести число! Ещё раз: ";
+                        std::cin.clear();
+                        std::cin.ignore(10000, '\n');
+                    }
                 }
 
                 std::cout << "Сколько элементов в ins? (от 1 до 100): ";
                 std::cin >> n2;
+                while (!std::cin || n2 < 1 || n2 > 100) {
+                    std::cout << "Введите число от 1 до 100: ";
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    std::cin >> n2;
+                }
                 for (int i = 0; i < n2; i++) {
                     std::cout << "ins[" << i << "] = ";
-                    std::cin >> ins[i];
+                    while (!(std::cin >> ins[i])) {
+                        std::cout << "Нужно ввести число! Ещё раз: ";
+                        std::cin.clear();
+                        std::cin.ignore(10000, '\n');
+                    }
                 }
 
                 std::cout << "Введите pos: ";
-                std::cin >> pos;
+                while (!(std::cin >> pos)) {
+                    std::cout << "Нужно ввести число! Ещё раз: ";
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                }
                 std::cin.ignore(10000, '\n');
 
                 int* result = add(arr, n1, ins, n2, pos);
@@ -540,9 +593,20 @@ int main() {
 
                 std::cout << "Сколько элементов? (от 1 до 100): ";
                 std::cin >> n;
+                while (!std::cin || n < 1 || n > 100) {
+                    std::cout << "Введите число от 1 до 100: ";
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    std::cin >> n;
+                }
+
                 for (int i = 0; i < n; i++) {
                     std::cout << "arr[" << i << "] = ";
-                    std::cin >> arr[i];
+                    while (!(std::cin >> arr[i])) {
+                        std::cout << "Нужно ввести число! Ещё раз: ";
+                        std::cin.clear();
+                        std::cin.ignore(10000, '\n');
+                    }
                 }
                 std::cin.ignore(10000, '\n');
 
@@ -564,14 +628,29 @@ int main() {
 
                 std::cout << "Сколько элементов? (от 1 до 100): ";
                 std::cin >> n;
+                while (!std::cin || n < 1 || n > 100) {
+                    std::cout << "Введите число от 1 до 100: ";
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    std::cin >> n;
+                }
+
                 for (int i = 0; i < n; i++) {
                     std::cout << "arr[" << i << "] = ";
-                    std::cin >> arr[i];
+                    while (!(std::cin >> arr[i])) {
+                        std::cout << "Нужно ввести число! Ещё раз: ";
+                        std::cin.clear();
+                        std::cin.ignore(10000, '\n');
+                    }
                 }
 
                 int x;
                 std::cout << "Введите x: ";
-                std::cin >> x;
+                while (!(std::cin >> x)) {
+                    std::cout << "Нужно ввести число! Ещё раз: ";
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                }
                 std::cin.ignore(10000, '\n');
 
                 int resultSize;
