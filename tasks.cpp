@@ -221,8 +221,6 @@ int* findAll(int arr[], int size, int x, int& resultSize) {
 
 
 int main() {
-    setlocale(LC_ALL, "ru_RU.UTF-8");
-    SetConsoleOutputCP(65001);
     int choice;
     do {
         std::cout << "Задачи\n";
@@ -261,7 +259,7 @@ int main() {
 
         switch (choice) {
             case 1: {
-                double x;
+                double x = 0;
                 std::cout << "Введите x: ";
                 if (std::cin >> x) {
                     std::cout << "Дробная часть: " << fraction(x) << std::endl;
@@ -274,7 +272,7 @@ int main() {
                 break;
             }
             case 2: {
-                char x;
+                char x = 0;
                 std::cout << "Введите символ (цифру от 0 до 9): ";
                 std::cin >> x;
 
@@ -287,7 +285,7 @@ int main() {
                 break;
             }
             case 3: {
-                int x;
+                int x = 0;
                 std::cout << "Введите число: ";
                 if (std::cin >> x) {
                     std::cout << std::boolalpha << is2Digits(x) << std::endl;
@@ -300,9 +298,9 @@ int main() {
                 break;
             }
             case 4: {
-                int a;
-                int b;
-                int num;
+                int a = 0;
+                int b = 0;
+                int num = 0;
                 std::cout << "Введите правую и левую границу и число: " << std::endl;
                 if ((std::cin >> a) && (std::cin >> b) && (std::cin >> num)) {
                     std::cin.ignore(10000, '\n');
@@ -315,9 +313,9 @@ int main() {
                 break;
             }
             case 5: {
-                int a;
-                int b;
-                int c;
+                int a = 0;
+                int b = 0;
+                int c = 0;
                 std::cout << "Введите три числа" << std::endl;
                 if ((std::cin >> a) && (std::cin >> b) && (std::cin >> c)) {
                     std::cin.ignore(10000, '\n');
@@ -330,7 +328,7 @@ int main() {
                 break;
             }
             case 6: {
-                int x;
+                int x = 0;
                 std::cout << "Введите число: " << std::endl;
                 if ((std::cin >> x)) {
                     std::cin.ignore(10000, '\n');
@@ -343,7 +341,7 @@ int main() {
                 break;
             }
             case 7: {
-                int x;
+                int x = 0;
                 std::cout << "Введите число: " << std::endl;
                 if ((std::cin >> x)) {
                     std::cin.ignore(10000, '\n');
@@ -356,9 +354,9 @@ int main() {
                 break;
             }
             case 8: {
-                int x;
-                int y;
-                int z;
+                int x = 0;
+                int y = 0;
+                int z = 0;
                 std::cout << "Введите три числа: " << std::endl;
                 if ((std::cin >> x) && (std::cin >> y) && (std::cin >> z)) {
                     std::cin.ignore(10000, '\n');
@@ -371,8 +369,8 @@ int main() {
                 break;
             }
             case 9: {
-                int x;
-                int y;
+                int x = 0;
+                int y = 0;
                 std::cout << "Введите два числа: " << std::endl;
                 if ((std::cin >> x) && (std::cin >> y)) {
                     std::cin.ignore(10000, '\n');
@@ -385,7 +383,7 @@ int main() {
                 break;
             }
             case 10: {
-                int x;
+                int x = 0;
                 std::cout << "Введите число: ";
                 if (std::cin >> x) {
                     std::cin.ignore(10000, '\n');
@@ -398,7 +396,7 @@ int main() {
                 break;
             }
             case 11: {
-                int x;
+                int x = 0;
                 std::cout << "Введите число: " << std::endl;
                 if ((std::cin >> x) && (x >= 0)) {
                     std::cin.ignore(10000, '\n');
@@ -411,7 +409,7 @@ int main() {
                 break;
             }
             case 12: {
-                int x;
+                int x = 0;
                 std::cout << "Введите число: " << std::endl;
                 if ((std::cin >> x) && (x >= 0)) {
                     std::cin.ignore(10000, '\n');
@@ -424,7 +422,7 @@ int main() {
                 break;
             }
             case 13: {
-                long x;
+                long x = 0;
                 std::cout << "Введите число: " << std::endl;
                 if (std::cin >> x) {
                     std::cin.ignore(10000, '\n');
@@ -437,7 +435,7 @@ int main() {
                 break;
             }
             case 14: {
-                int x;
+                int x = 0;
                 std::cout << "Введите x: ";
                 if (std::cin >> x) {
                     std::cin.ignore(10000, '\n');
@@ -454,7 +452,7 @@ int main() {
                 break;
             }
             case 15: {
-                int x;
+                int x = 0;
                 std::cout << "Введите x: ";
                 if (std::cin >> x) {
                     std::cin.ignore(10000, '\n');
@@ -472,7 +470,7 @@ int main() {
             }
             case 16: {
                 int arr[100];
-                int n;
+                int n = 0;
                 std::cout << "Сколько элементов? (от 1 до 100): ";
                 std::cin >> n;
 
@@ -492,7 +490,7 @@ int main() {
                     }
                 }
 
-                int x;
+                int x = 0;
                 std::cout << "Введите x: ";
                 while (!(std::cin >> x)) {
                     std::cout << "Нужно ввести число! Ещё раз: ";
@@ -506,7 +504,7 @@ int main() {
             }
             case 17: {
                 int arr[100];
-                int n;
+                int n = 0;
                 std::cout << "Сколько элементов? (от 1 до 100): ";
                 std::cin >> n;
 
@@ -531,8 +529,11 @@ int main() {
                 break;
             }
             case 18: {
-                int arr[100], ins[100];
-                int n1, n2, pos;
+                int arr[100];
+                int ins[100];
+                int n = 0;
+                int n2 = 0, 
+                int pos = 0;
 
                 std::cout << "Сколько элементов в arr? (от 1 до 100): ";
                 std::cin >> n1;
@@ -591,7 +592,7 @@ int main() {
             }
             case 19: {
                 int arr[100];
-                int n;
+                int n = 0;
 
                 std::cout << "Сколько элементов? (от 1 до 100): ";
                 std::cin >> n;
@@ -626,7 +627,7 @@ int main() {
             }
             case 20: {
                 int arr[100];
-                int n;
+                int n = 0;
 
                 std::cout << "Сколько элементов? (от 1 до 100): ";
                 std::cin >> n;
@@ -646,7 +647,7 @@ int main() {
                     }
                 }
 
-                int x;
+                int x = 0;
                 std::cout << "Введите x: ";
                 while (!(std::cin >> x)) {
                     std::cout << "Нужно ввести число! Ещё раз: ";
