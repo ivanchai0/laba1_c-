@@ -1,10 +1,8 @@
 #include <iostream>
-#include <windows.h>
-#include <clocale>
 #include <string>
 
 double fraction(double x) {
-    return x - (int)x;
+    abs(return x - (int)x);
 }
 
 int charToNum(char x) {
