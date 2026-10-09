@@ -110,8 +110,12 @@ std::string chet(int x) {
 }
 
 int numLen(long x) {
-    if (x == 0) return 1;
-    if (x < 0) x = -x;
+    if (x == 0) {
+        return 1;
+    }
+    if (x < 0) {
+        x = -x;
+    }
 
     int count = 0;
     while (x > 0) {
